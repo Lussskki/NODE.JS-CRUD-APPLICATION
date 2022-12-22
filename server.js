@@ -9,18 +9,18 @@ const app = express()
 const port = 3000
 
 
-const users = JSON.parse(fs.readFileSync('./db/myFriends.json').toString())
+const myFriends = JSON.parse(fs.readFileSync('./db/myFriends.json').toString())
 
 
 
 
-app.get('/users', (req,res,next) =>{
+app.get('/myFriends', (req,res,next) =>{
     // console.log(users)
-    res.send(users)
+    res.send(myFriends)
 })
 
 
-app.post('/users',(req,res,next)=>{
+app.post('/myFriends',(req,res,next)=>{
     users.push(req.body)
     fs.writeFileSync('./db/myFriends.json', JSON.stringify(users))
     res.send('Post request recieved')
