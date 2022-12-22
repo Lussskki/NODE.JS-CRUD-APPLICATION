@@ -36,7 +36,9 @@ app.get('/users', (req,res) =>{
 })
 
 
-
+app.post('/users',()=>{
+    
+})
 
 
 
