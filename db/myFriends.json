@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "Luka",
+        "lastName": "Guledani"
+    },
+    {
+        "id": 2,
+        "name": "Giorgi",
+        "lastName": "Tchezia"
+    },
+    {
+        "id": 3,
+        "name": "Luka",
+        "lastName": "Gvaramia"
+    },
+    {
+        "id": 4,
+        "name": "Irakli",
+        "lastName": "Jishkariani"
+    },
+    {
+        "id": 5,
+        "name": "Gigi",
+        "lastName": "Toloraia"
+    },
+    {
+        "id": 6,
+        "name": "Cotne",
+        "lastName": "Kvaraia"
+    },
+    {
+        "id": 7,
+        "name": "Tato",
+        "lastName": "Khvingia"
+    }
+]
