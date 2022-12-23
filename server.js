@@ -27,31 +27,35 @@ app.post('/myFriends',(req,res,next)=>{
     res.send('Post request recieved')
 })
 
-// app.put('/myFriends/:name',(req,res,next)=>{
-//       const {name} = req.params
-//       const {lastName} = req.body
-//       let hasFound = false 
-//       fs.writeFileSync('./db/myFriends.json', JSON.stringify(myFriends))
+app.put('/myFriends/:name',(req,res,next)=>{
+      const {name,lastName} = req.params
 
+        const updateUser = myFriends.findindex(myFriends.id==1) //მინდა ჯერ პირველი აიდი, რომელსაც აქვს ის განმეახლებინა, ჩემი.
+        const addToDb = myFriends.push(req.body)
 
-//       myFriends.forEach(i => {
-//         if(name === name){
-//             i.lastName = lastName,
-//             hasFound = true
-//         }
-//         if(hasFound){
-//             return res.json({
-//                 Message:'update successfuly'
-//             })
-//         }else{
-//             return res.json({
-//                 Message:'user couldnt found'
-//             })
-//         }    
+      fs.writeFileSync('./db/myFriends.json', JSON.stringify(addToDb))
+      
+      
+      
+      let hasFound = false 
+      myFriends.forEach(i => {
+        if(name === name){
+            i.lastName = lastName,
+            hasFound = true
+        }
+        if(hasFound){
+            return res.json({
+                Message:'update successfuly'
+            })
+        }else{
+            return res.json({
+                Message:'user couldnt found'
+            })
+        }    
  
 
-//       })
-// })
+      })
+})
 
 
 app.listen(port, (req,res)=>{
