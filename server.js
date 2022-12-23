@@ -27,7 +27,7 @@ app.post('/myFriends',(req,res,next)=>{
     res.send('Post request recieved')
 })
 
-app.put('/myFriends/:name',(req,res,next)=>{
+app.put('/myFriends/:id',(req,res,next)=>{
       const {name,lastName} = req.params
 
         const updateUser = myFriends.findindex(myFriends.id==1) //მინდა ჯერ პირველი აიდი, რომელსაც აქვს ის განმეახლებინა, ჩემი.
