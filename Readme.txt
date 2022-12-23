@@ -8,3 +8,6 @@ working on about methods.
  with POSTMAN for requests. 
  first: pnpm install for node modules
  second: 'npm start' for run server
+
+
+ ##i add puth method but dont working sussessfuly, can't add user to array db, only working with postman, sending json  messages 
