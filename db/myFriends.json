@@ -1,28 +1,9 @@
 [
     {
-        "id": 1,
-        "name": "Luka",
-        "lastName": "Guledani"
-    },
-    {
-        "id": 2,
+        "id": "2",
+        "isbn": "22",
         "name": "Giorgi",
         "lastName": "Tchezia"
-    },
-    {
-        "id": 3,
-        "name": "Luka",
-        "lastName": "Gvaramia"
-    },
-    {
-        "id": 4,
-        "name": "Irakli",
-        "lastName": "Jishkariani"
-    },
-    {
-        "id": 5,
-        "name": "Gigi",
-        "lastName": "Toloraia"
     },
     {
         "id": 6,
@@ -38,6 +19,11 @@
         "id": 8,
         "name": "ლეღვერა",
         "lastName": "ხომერიკი"
+    },
+    {
+        "id": 1,
+        "isbn": "11",
+        "name": "ლუკა",
+        "lastName": "გულედანი"
     }
-    
 ]
