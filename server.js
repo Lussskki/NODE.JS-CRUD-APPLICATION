@@ -26,24 +26,28 @@ app.get('/myFriends', (req,res,next) =>{
 app.post('/myFriends',(req,res,next)=>{
     myFriends.push(req.body)
     fs.writeFileSync('./db/myFriends.json', JSON.stringify(myFriends))
-    res.send('Post request recieved')
+    res.send('Friend added successfully')
 })
 //პოსტ მეთოდი, შეგიძლია მონაცემთა ბაზაში ჩაამატო ინფორმაცია 
 //post method, you can add data to db 
 
 app.delete('/myFriends/:isbn',(req,res,next)=>{
     const isbn = req.params.isbn
+    let found = false
 
     for (let i = 0; i<myFriends.length; i++){
         let friend = myFriends[i]
 
         if (friend.id === isbn){
+          let found = true
           const deleted = myFriends.splice(i,1)
           fs.writeFileSync('./db/myFriends.json', JSON.stringify(myFriends))
         //   console.log(myFriends)
           res.send(deleted)
         }
     }
+    if(!found){res.status(404).send(`This friend with ISBN ${isbn} notfound `)}
+    
 })
 //წაშლის მეთოდი,ISBN მითითებით შეგიძლია წაშალო კონკრეტული ინფორმაცია
 //delete method,you can  delete data with ISBN
