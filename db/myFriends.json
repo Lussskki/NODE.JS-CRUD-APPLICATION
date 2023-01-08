@@ -6,22 +6,17 @@
         "lastName": "Tchezia"
     },
     {
-        "id": 6,
-        "name": "Cotne",
-        "lastName": "Kvaraia"
-    },
-    {
-        "id": 7,
+        "id": "7",
         "name": "Tato",
         "lastName": "Khvingia"
     },
     {
-        "id": 8,
+        "id": "8",
         "name": "ლეღვერა",
         "lastName": "ხომერიკი"
     },
     {
-        "id": 1,
+        "id": "1",
         "isbn": "11",
         "name": "ლუკა",
         "lastName": "გულედანი"
