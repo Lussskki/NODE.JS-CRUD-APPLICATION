@@ -19,6 +19,7 @@ app.get('/myFriends', (req,res,next) =>{
     // console.log(users)
     res.send(myFriends)
 })
+//გეთ მეთოდი, მოაქვს მონაცემები სერვერიდან
 
 
 app.post('/myFriends',(req,res,next)=>{
@@ -26,36 +27,26 @@ app.post('/myFriends',(req,res,next)=>{
     fs.writeFileSync('./db/myFriends.json', JSON.stringify(myFriends))
     res.send('Post request recieved')
 })
+//პოსტ მეთოდი, შეგიძლია მონაცემთა ბაზაში ჩაამატო ინფორმაცია 
 
-app.put('/myFriends/:id',(req,res,next)=>{
-      const {name,lastName} = req.params
+app.delete('/myFriends/:isbn',(req,res,next)=>{
+    const isbn = req.params.isbn
 
-        const updateUser = myFriends.findindex(myFriends.id==1) //მინდა ჯერ პირველი აიდი, რომელსაც აქვს ის განმეახლებინა, ჩემი.
-        const addToDb = myFriends.push(req.body)
+    for (let i = 0; i<myFriends.length; i++){
+        let friend = myFriends[i]
 
-      fs.writeFileSync('./db/myFriends.json', JSON.stringify(addToDb))
-      
-      
-      
-      let hasFound = false 
-      myFriends.forEach(i => {
-        if(name === name){
-            i.lastName = lastName,
-            hasFound = true
+        if (friend.id === isbn){
+          const deleted = myFriends.splice(i,1)
+          fs.writeFileSync('./db/myFriends.json', JSON.stringify(myFriends))
+        //   console.log(myFriends)
+          res.send(deleted)
         }
-        if(hasFound){
-            return res.json({
-                Message:'update successfuly'
-            })
-        }else{
-            return res.json({
-                Message:'user couldnt found'
-            })
-        }    
- 
-
-      })
+    }
 })
+//წაშლის მეთოდი,აიდის მითითებით შეგიძლია წაშალო კონკრეტული ინფორმაცია
+
+
+
 
 
 app.listen(port, (req,res)=>{
