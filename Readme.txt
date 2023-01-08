@@ -11,3 +11,4 @@ working on about methods.
 
 
  ##i add puth method but dont working sussessfuly, can't add user to array db, only working with postman, sending json  messages 
+ ##added delete method but only working with ISBN and i am working now how to delete with an ID
