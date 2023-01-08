@@ -20,6 +20,7 @@ app.get('/myFriends', (req,res,next) =>{
     res.send(myFriends)
 })
 //გეთ მეთოდი, მოაქვს მონაცემები სერვერიდან
+//get method, pushing data to site
 
 
 app.post('/myFriends',(req,res,next)=>{
@@ -28,6 +29,7 @@ app.post('/myFriends',(req,res,next)=>{
     res.send('Post request recieved')
 })
 //პოსტ მეთოდი, შეგიძლია მონაცემთა ბაზაში ჩაამატო ინფორმაცია 
+//post method, you can add data to db 
 
 app.delete('/myFriends/:isbn',(req,res,next)=>{
     const isbn = req.params.isbn
@@ -43,7 +45,8 @@ app.delete('/myFriends/:isbn',(req,res,next)=>{
         }
     }
 })
-//წაშლის მეთოდი,აიდის მითითებით შეგიძლია წაშალო კონკრეტული ინფორმაცია
+//წაშლის მეთოდი,ISBN მითითებით შეგიძლია წაშალო კონკრეტული ინფორმაცია
+//delete method,you can  delete data with ISBN
 
 
 
