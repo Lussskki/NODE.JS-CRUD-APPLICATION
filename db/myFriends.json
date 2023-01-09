@@ -1,11 +1,5 @@
 [
     {
-        "id": "2",
-        "isbn": "22",
-        "name": "Giorgi",
-        "lastName": "Tchezia"
-    },
-    {
         "id": "7",
         "name": "Tato",
         "lastName": "Khvingia"
@@ -16,9 +10,9 @@
         "lastName": "ხომერიკი"
     },
     {
-        "id": "1",
-        "isbn": "11",
-        "name": "ლუკა",
-        "lastName": "გულედანი"
+        "id": 3,
+        "isbn": "33",
+        "name": "nugzarovich",
+        "lastName": "kvashali"
     }
 ]
