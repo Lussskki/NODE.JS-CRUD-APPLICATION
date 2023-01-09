@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "e419f85c-899f-42e1-8224-2c0f2a5fc3b1",
+		"name": "nodejs-get-post-put-delete-method",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24187551"
+	},
+	"item": [
+		{
+			"name": "fetch data",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "add friend",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
