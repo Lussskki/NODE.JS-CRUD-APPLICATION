@@ -22,7 +22,6 @@ app.get('/myFriends', (req,res,next) =>{
 //გეთ მეთოდი, მოაქვს მონაცემები სერვერიდან
 //get method, pushing data to site
 
-
 app.post('/myFriends',(req,res,next)=>{
     myFriends.push(req.body)
     fs.writeFileSync('./db/myFriends.json', JSON.stringify(myFriends))
@@ -38,12 +37,12 @@ app.delete('/myFriends/:isbn',(req,res,next)=>{
     for (let i = 0; i<myFriends.length; i++){
         let friend = myFriends[i]
 
-        if (friend.id === isbn){
-          let found = true
+        if (friend.isbn === isbn){
+           found = true
           const deleted = myFriends.splice(i,1)
           fs.writeFileSync('./db/myFriends.json', JSON.stringify(myFriends))
         //   console.log(myFriends)
-          res.send(deleted)
+          res.send(`This Data is deleted`)
         }
     }
     if(!found){res.status(404).send(`This friend with ISBN ${isbn} notfound `)}
@@ -51,6 +50,27 @@ app.delete('/myFriends/:isbn',(req,res,next)=>{
 })
 //წაშლის მეთოდი,ISBN მითითებით შეგიძლია წაშალო კონკრეტული ინფორმაცია
 //delete method,you can  delete data with ISBN
+
+app.put('/myFriends/:isbn', (req,res,next)=>{
+    const isbn = req.params.isbn
+    const updatedFriendData = req.body
+    let found = false
+
+    for (let i=0; i<myFriends.length; i++){
+        let friend = myFriends[i]
+
+        if (friend.isbn === isbn){
+            found = true
+           myFriends[i] = updatedFriendData
+           fs.writeFileSync('./db/myFriends.json', JSON.stringify(myFriends))
+
+           res.send(`This friend with ISBN ${isbn} updated `)
+        }
+
+    }
+     if(!found){res.status(404).send(`This friend with ISBN ${isbn} notfound `)}
+})
+//კონრეტული ობიქეტის შიგნით ინფორმაციის განახლება
 
 
 
